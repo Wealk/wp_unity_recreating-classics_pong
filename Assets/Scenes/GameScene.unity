@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 165362361}
   - component: {fileID: 165362360}
   - component: {fileID: 165362359}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PaddleRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 165362359}
-  ball: {fileID: 1534533041}
+  distanceOffset: 0.25
 --- !u!1 &652321964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,6 +1591,10 @@ PrefabInstance:
     - target: {fileID: 3551515002657681125, guid: 08cb0974cd970f54aae3c9aaaa349d76, type: 3}
       propertyPath: m_Name
       value: PaddleLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551515002657681125, guid: 08cb0974cd970f54aae3c9aaaa349d76, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3551515002657681125, guid: 08cb0974cd970f54aae3c9aaaa349d76, type: 3}
       propertyPath: m_IsActive

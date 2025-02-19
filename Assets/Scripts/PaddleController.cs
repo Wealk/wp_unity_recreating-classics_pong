@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PaddleController : MonoBehaviour {
     private const float COURT_SIZE = 4.5f;
-    private const float DETECTION_OFFSET = 0.1f;
+    private const float DETECTION_OFFSET = 0.05f;
 
     // Public properties
     public GameEntity EntityController { get { return entityController; } set { entityController = value; } }
