@@ -166,4 +166,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 7
-  incrementSpeed: 2
+  incrementSpeed: 1

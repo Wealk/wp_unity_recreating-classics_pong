@@ -175,6 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4fde97589c0af4dbb4774463f4fced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlEntity: 1
+  entityController: 0
   movementSpeed: 10
   maxAngle: 50

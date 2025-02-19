@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PaddleController : MonoBehaviour {
     private const float COURT_SIZE = 4.5f;
+    private const float DETECTION_OFFSET = 0.1f;
 
     // Public properties
     public GameEntity EntityController { get { return entityController; } set { entityController = value; } }
@@ -19,13 +20,18 @@ public class PaddleController : MonoBehaviour {
     // Private variables
     private PongActions actions;
     private new BoxCollider2D collider;
+    private BallController ball;
     private Vector2 direction;
+    private Vector2 contactPoint;
+    private float halfBound;
 
     #region Unity methods
     private void Awake() {
         actions = new PongActions();
         collider = GetComponent<BoxCollider2D>();
         direction = Vector2.zero;
+        contactPoint = Vector2.zero;
+        halfBound = (collider.bounds.size.y / 2f) - DETECTION_OFFSET;
     }
 
     private void Start() {
@@ -58,11 +64,23 @@ public class PaddleController : MonoBehaviour {
             if (transform.position.y > COURT_SIZE) transform.position = new Vector3(transform.position.x, COURT_SIZE, 0);
             else if (transform.position.y < -COURT_SIZE) transform.position = new Vector3(transform.position.x, -COURT_SIZE, 0);
         }
+
+        if (contactPoint != Vector2.zero) {
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.collider.CompareTag("Ball")) {
+        if (collision.collider.CompareTag("Ball") && collision.collider.TryGetComponent(out ball)) {
+            var contactPoint = collision.GetContact(0).point;
+            var upperBound = transform.position.y + halfBound;
+            var lowerBound = transform.position.y - halfBound;
+            if (contactPoint.y > lowerBound && contactPoint.y < upperBound) {
+                var relativeY = (contactPoint.y - transform.position.y) / (collider.bounds.size.y / 2);
+                var bounceRadians = Mathf.Clamp(relativeY, -1f, 1f) * maxAngle * Mathf.Deg2Rad;
 
+                ball.NotifyPaddleCollision(bounceRadians);
+            }
         }
     }
     #endregion

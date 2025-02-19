@@ -30,9 +30,13 @@ public class BallController : MonoBehaviour {
         rigidbody.linearVelocity = movementDirection.normalized * speed;
     }
 
-    public void NotifyPaddleCollision(Vector2 movementDirection) {
+    public void NotifyPaddleCollision(float bounceRadians) {
         speed += incrementSpeed;
-        rigidbody.linearVelocity = movementDirection.normalized * speed;
+        rigidbody.angularVelocity = 0;
+
+        var signX = rigidbody.linearVelocityX > 0 ? 1 : -1;
+        var direction = new Vector2(Mathf.Cos(bounceRadians) * -signX, Mathf.Sin(bounceRadians));
+        rigidbody.linearVelocity = direction.normalized * speed;
     }
     #endregion
 }
