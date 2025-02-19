@@ -176,5 +176,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityController: 0
-  movementSpeed: 10
+  movementSpeed: 8
   maxAngle: 50

@@ -39,12 +39,12 @@ public class BallController : MonoBehaviour {
         InvokeChangeMovement();
     }
 
-    public void NotifyPaddleCollision(float bounceRadians) {
+    public void NotifyPaddleCollision(float bounceRadians, bool goRight) {
         speed += incrementSpeed;
         rigidbody.angularVelocity = 0;
 
-        var signX = rigidbody.linearVelocityX > 0 ? 1 : -1;
-        var direction = new Vector2(Mathf.Cos(bounceRadians) * -signX, Mathf.Sin(bounceRadians));
+        var direction = new Vector2(Mathf.Cos(bounceRadians), Mathf.Sin(bounceRadians));
+        if (goRight && direction.x < 0 || !goRight && direction.x > 0) direction.x = -direction.x;
         rigidbody.linearVelocity = direction.normalized * speed;
     }
     #endregion
