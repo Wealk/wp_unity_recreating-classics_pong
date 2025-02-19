@@ -1,6 +1,6 @@
 # 🎮 Pong Classic Remake - Unity
 
-¡Bienvenido a la recreación del clásico *Pong* de Atari en Unity! 🕹️  
+Este proyecto es una recreación del clásico Pong de Atari usando Unity. Se ha diseñado para ser fiel al juego original, manteniendo su jugabilidad simple pero desafiante.
 Este proyecto forma parte de una serie de recreaciones de videojuegos clásicos, diseñados para aprender, experimentar y mejorar habilidades en desarrollo de juegos con Unity.
 
 > **Objetivo**: Reproducir la experiencia del *Pong* original con mecánicas fieles y código optimizado.
@@ -18,13 +18,24 @@ Para entender mejor la jugabilidad y el diseño original, puedes revisar los sig
 
 ---
 
-## 📌 Características del proyecto
+## 📌 Game design
 
-✅ **Física clásica de *Pong*** con colisiones precisas.  
-✅ **Modos de juego**: Un jugador (contra IA) y multijugador local.  
-✅ **Interfaz minimalista** inspirada en el diseño original de Atari.  
-✅ **Configuración personalizable** (velocidad, tamaño de paddles y pelota).  
-✅ **Código modular y bien estructurado**, ideal para aprendizaje y expansión.  
+Pista:
+- Límites verticales superior e inferior -> golpean la bola.
+- Límites horizontales izquierda y derecha -> porterías.
+- Línea vertical decorativa separando las 'canchas'.
+
+Entidades:
+- Bola: entidad pasiva que aumenta la velocidad tras ser golpeada por una pala.
+- Pala: entidad activa que puede desplazarse de arriba a abajo.
+
+Comportamientos:
+- Al iniciar la partida, la bola aparece en una posición aleatoria en el centro de la pista en un ángulo determinado con su velocidad inicial. Empieza hacia la izquierda o la derecha aleatoriamente, y hacia arriba o hacia abajo aleatoriamente.
+- Al conseguir un punto, la bola aparecerá en una posición aleatoria, en el mismo ángulo, hacia arriba o hacia abajo aleatoriamente, pero en la dirección del jugador contrario que ha conseguido el punto.
+- El primero en llegar a 10 puntos gana.
+
+Interfaz:
+- Se muestra la puntuación de cada jugador.
 
 ---
 
@@ -50,7 +61,7 @@ Para entender mejor la jugabilidad y el diseño original, puedes revisar los sig
 ## 🐟 Licencia
 
 Este proyecto se distribuye bajo la licencia **MIT**.  
-Puedes usarlo, modificarlo y distribuirlo libremente. Consulta el archivo `LICENSE` para más información.
+Puedes usarlo, modificarlo y distribuirlo libremente.
 
 ---
 
