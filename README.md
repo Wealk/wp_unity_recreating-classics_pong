@@ -1,4 +1,4 @@
-# 🎮 Pong Classic Remake - Unity
+# 🎮 Recreando clásicos: Pong - Unity
 
 Este proyecto es una recreación del clásico Pong de Atari usando Unity. Se ha diseñado para ser fiel al juego original, manteniendo su jugabilidad simple pero desafiante.
 Este proyecto forma parte de una serie de recreaciones de videojuegos clásicos, diseñados para aprender, experimentar y mejorar habilidades en desarrollo de juegos con Unity.
@@ -15,6 +15,7 @@ Para entender mejor la jugabilidad y el diseño original, puedes revisar los sig
 1. [Pong (Arcade, 1972) - Gameplay](https://www.youtube.com/watch?v=fiShX2pTz9A)  
 2. [Pong 1972 by Atari](https://www.youtube.com/watch?v=fhd7FfGCdCo)
 3. [Original Atari PONG (1972) arcade machine gameplay video](https://www.youtube.com/watch?v=fiShX2pTz9A)
+4. [Wikipedia](https://es.wikipedia.org/wiki/Pong)
 
 ---
 
