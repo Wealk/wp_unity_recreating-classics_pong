@@ -8,22 +8,32 @@ public class BallController : MonoBehaviour {
     public event Action<Vector2, Vector2> OnBallMovementChange;
 
     // Editor variables
+    [Header("Behaviour")]
     [SerializeField]
     private float initialSpeed;
     [SerializeField]
     private float incrementSpeed;
 
+    [Header("Sounds")]
+    [SerializeField]
+    private AudioClip paddleCollisionEffect;
+    [SerializeField]
+    private AudioClip boundCollisionEffect;
+
     // Private variables
+    private new AudioSource audio;
     private new Rigidbody2D rigidbody;
     private float speed;
 
     #region Unity methods
     private void Awake() {
+        audio = GetComponent<AudioSource>();
         rigidbody = GetComponent<Rigidbody2D>();
         speed = initialSpeed;
     }
 
     private void OnCollisionExit2D(Collision2D collision) {
+        audio.PlayOneShot(collision.collider.CompareTag("Paddle") ? paddleCollisionEffect : boundCollisionEffect);
         InvokeChangeMovement();
     }
     #endregion

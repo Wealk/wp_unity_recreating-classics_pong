@@ -20,16 +20,3 @@ public class PersistentInformation : MonoBehaviour {
     }
     #endregion
 }
-
-public enum PlayMode {
-    None,
-    SinglePlayer,
-    LocalCoopPlayer
-}
-
-public enum GameEntity {
-    None,
-    Player1,
-    Player2,
-    AI
-}

@@ -20,13 +20,19 @@ public class GameController : MonoBehaviour {
     [SerializeField]
     private TextMeshProUGUI rightScoreText;
 
+    [Header("Sounds")]
+    [SerializeField]
+    private AudioClip scoreEffect;
+
     // Private variables
+    private new AudioSource audio;
     private AIController aiController;
     private int leftScore;
     private int rightScore;
 
     #region Unity methods
     private void Awake() {
+        audio = GetComponent<AudioSource>();
         aiController = GetComponent<AIController>();
         leftScore = 0;
         rightScore = 0;
@@ -52,6 +58,8 @@ public class GameController : MonoBehaviour {
         leftScoreText.SetText($"{leftScore}");
         if (leftScore >= winScore) EndGame(paddleLeft.EntityController);
         else ball.ResetBall(GetDirection(Vector2.right));
+
+        audio.PlayOneShot(scoreEffect);
     }
 
     public void PaddleRightScored() {
@@ -59,6 +67,8 @@ public class GameController : MonoBehaviour {
         rightScoreText.SetText($"{rightScore}");
         if (rightScore >= winScore) EndGame(paddleRight.EntityController);
         else ball.ResetBall(GetDirection(Vector2.left));
+
+        audio.PlayOneShot(scoreEffect);
     }
     #endregion
 
