@@ -36,9 +36,9 @@ public class EndOptions : MonoBehaviour {
     #region Auxiliar methods
     private string GetWinnerText(GameEntity gameWinner) {
         return gameWinner switch {
-            GameEntity.Player1 => "JUGADOR 1\nGANA",
-            GameEntity.Player2 => "JUGADOR 2\nGANA",
-            GameEntity.AI => "JUGADOR 1\nPIERDE",
+            GameEntity.Player1 => "PLAYER 1\nWINS",
+            GameEntity.Player2 => "PLAYER 2\nWINS",
+            GameEntity.AI => "COMPUTER\nWINS",
             _ => string.Empty,
         };
     }

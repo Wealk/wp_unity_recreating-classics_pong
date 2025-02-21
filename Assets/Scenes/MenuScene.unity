@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1 JUGADOR
+  m_text: 1 PLAYER
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 94b12dcc17cc4214bb97f22150428c12, type: 2}
   m_sharedMaterial: {fileID: -6260784029924241646, guid: 94b12dcc17cc4214bb97f22150428c12, type: 2}
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SALIR
+  m_text: EXIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 94b12dcc17cc4214bb97f22150428c12, type: 2}
   m_sharedMaterial: {fileID: -6260784029924241646, guid: 94b12dcc17cc4214bb97f22150428c12, type: 2}
@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2 JUGADORES
+  m_text: 2 PLAYERS
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 94b12dcc17cc4214bb97f22150428c12, type: 2}
   m_sharedMaterial: {fileID: -6260784029924241646, guid: 94b12dcc17cc4214bb97f22150428c12, type: 2}

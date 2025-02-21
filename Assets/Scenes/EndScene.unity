@@ -279,9 +279,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'JUGADOR 1
+  m_text: 'PLAYER 1
 
-    GANA'
+    WINS'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 94b12dcc17cc4214bb97f22150428c12, type: 2}
   m_sharedMaterial: {fileID: -6260784029924241646, guid: 94b12dcc17cc4214bb97f22150428c12, type: 2}
@@ -678,7 +678,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PULSA CUALQUIER TECLA PARA CONTINUAR
+  m_text: PRESS ANY KEY TO CONTINUE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 94b12dcc17cc4214bb97f22150428c12, type: 2}
   m_sharedMaterial: {fileID: -6260784029924241646, guid: 94b12dcc17cc4214bb97f22150428c12, type: 2}
